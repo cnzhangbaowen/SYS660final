@@ -16,6 +16,7 @@ def callRadobuttonPrint(v):
 def create_window():
     # ans是一个list, 里面每一个值对应一个回答的对象, 对于每一个对象可以用get获取它的数值
     return_list = []
+    print(E1.get())
     for an in ans:
         return_list.append(an.get())
     # print(return_list)
@@ -83,6 +84,11 @@ if __name__ == '__main__':
         frame.pack(side=TOP)
     button = tk.Button(root, text='Yes', width=25, command=create_window)
     button.pack(side=TOP)
+    L1 = Label(root, text="Q1")
+    L1.pack( side = LEFT)
+    global E1
+    E1 = Entry(root, bd =5)
+    E1.pack(side = RIGHT)
     root.mainloop()
 
 
